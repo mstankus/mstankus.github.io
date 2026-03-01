@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-	<title>My Purple Blog</title>
+	<title>Welcome to My Math and Computer Science Blog</title>
 	<subtitle>Lorem ipsum dolor sit amet consecuteor</subtitle>
 	
 	<link href="/atom.xml" rel="self"/>
 	<link href=""/>
-	<updated>2026-03-01T01:17:15Z</updated>
+	<updated>2026-03-01T01:21:08Z</updated>
 	<id>https://example.com/</id>
 	<author>
 		<name>John Doe</name>
