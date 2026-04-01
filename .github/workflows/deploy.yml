@@ -32,14 +32,31 @@ jobs:
           echo "$HOME/.local/bin" >> "$GITHUB_PATH"
 
       - name: Build books and assemble site
+        shell: bash
         run: |
+          set -euo pipefail
+
           rm -rf _site
           mkdir -p _site/assets
+
           cp index.html _site/index.html
           cp assets/site.css _site/assets/site.css
+
           mdbook build rust-fundamentals
           mdbook build proofs-and-structures
           mdbook build junk
+
+          # Copy favicon / icon files from repo root into deployed site root.
+          shopt -s nullglob
+          for f in *.ico; do
+            cp "$f" _site/
+          done
+          for f in favicon-*.png apple-touch-icon.png android-chrome-*.png site.webmanifest; do
+            if [ -f "$f" ]; then
+              cp "$f" _site/
+            fi
+          done
+
           touch _site/.nojekyll
 
       - name: Upload Pages artifact
