@@ -1,0 +1,15 @@
+[book]
+title = "Proofs and Structures"
+authors = ["Mark Stankus"]
+language = "en"
+multilingual = false
+src = "src"
+
+[build]
+build-dir = "../_site/proofs-and-structures"
+
+[output.html]
+default-theme = "navy"
+git-repository-url = "https://github.com/mstankus/mstankus.github.io"
+edit-url-template = "https://github.com/mstankus/mstankus.github.io/edit/main/proofs-and-structures/{path}"
+site-url = "/proofs-and-structures/"

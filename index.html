@@ -1,297 +1,82 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Homepage | Welcome to My Math and Computer Science Blog</title>
-  <meta name="description" content="Explore math and computer science topics.">
-
-  <link rel="shortcut icon" href="/static/img/favicon.ico" type="image/x-icon">
-  <link rel="stylesheet" href="/static/css/main.css" media="all">
-
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="description" content="Training books, notes, and course material by Matt Stankus." />
+  <title>Matt Stankus | Training Books</title>
+  <link rel="stylesheet" href="assets/site.css" />
 </head>
 <body>
-  
-<nav class="navbar">
-  <div class="navbar__inner">
-    <a class="navbar__logo" href="/">Welcome to My Math and Computer Science Blog</a>
-
-    <div class="navbar__mobile-options">
-      <div class="navbar__button dark-toggle" aria-label="toggle dark theme">
-        <img src="/static/img/moon.svg" alt="">
+  <header class="hero">
+    <div class="container">
+      <p class="eyebrow">mstankus.github.io</p>
+      <h1>Training books and course notes</h1>
+      <p class="lead">
+        A GitHub Pages landing page that links into multiple mdBook sites.
+        Replace the placeholder books below with your actual content.
+      </p>
+      <div class="hero-actions">
+        <a class="button primary" href="#books">Browse books</a>
+        <a class="button" href="https://github.com/mstankus/mstankus.github.io">Repository</a>
       </div>
-      <button class="navbar__button navbar__hamburger" aria-expanded="false" aria-label="toggle menu">
-        <svg xmlns="http://www.w3.org/2000/svg" height="24px" viewBox="0 0 24 24" width="24px" fill="#333333">
-          <path d="M0 0h24v24H0z" fill="none"/>
-          <path d="M3 18h18v-2H3v2zm0-5h18v-2H3v2zm0-7v2h18V6H3z"/>
-        </svg>
-      </button>
     </div>
+  </header>
 
-    <div class="navbar__links">
-      
-        <a class="navbar__link navbar__link--active" href="/">
-          Home
+  <main>
+    <section class="section container" id="books">
+      <div class="section-heading">
+        <h2>Books</h2>
+        <p>Each card points to a separate mdBook built into its own subdirectory.</p>
+      </div>
+
+      <div class="card-grid">
+        <a class="card" href="./rust-fundamentals/">
+          <div class="card-tag">mdBook</div>
+          <h3>Rust Fundamentals</h3>
+          <p>
+            Ownership, borrowing, enums, traits, error handling, modules, and testing.
+          </p>
+          <span class="card-cta">Open book</span>
         </a>
-        <a class="navbar__link " href="/pages/about/">
-          About
+
+        <a class="card" href="./proofs-and-structures/">
+          <div class="card-tag">mdBook</div>
+          <h3>Proofs and Structures</h3>
+          <p>
+            Sample mathematics-oriented content showing how a second book fits into the same site.
+          </p>
+          <span class="card-cta">Open book</span>
         </a>
-        <a class="navbar__link " href="/tags/">
-          Tags
-        </a>
-
-      <div class="navbar__button dark-toggle" aria-label="toggle dark theme">
-        <img src="/static/img/moon.svg" alt="">
       </div>
+    </section>
 
-    </div>
-  </div>
-
-  <div class="navbar__mobile-links">
-    
-      <a class="navbar__mobile-link navbar__mobile-link--active" href="/">
-        Home
-      </a>
-      <a class="navbar__mobile-link " href="/pages/about/">
-        About
-      </a>
-      <a class="navbar__mobile-link " href="/tags/">
-        Tags
-      </a>
-  </div>
-
-</nav>
-
-  
-<div class="container">
-  <div class="hero">
-    <h1>
-      
-        
-        Welcome to My Math and Computer Science Blog
-      
-    </h1>
-    <p class="hero__description">
-      
-        Explore math and computer science topics.
-      
-    </p>
-  </div>
-
-  <h2 class="section-title">
-    Latest Posts
-  </h2>
-  <div class="card-grid">
-  
-    <div class="card">
-      <h3 class="card__title">
-        <a href="/posts/markdown-syntax-two/">Markdown Syntax Guide 2</a>
-      </h3>
-      <p class="card__date">24 Mar, 2021</p>
-      <p class="card__description">Copy of the sample article showcasing basic Markdown syntax and formatting for HTML elements.</p>
-      <p class="card__subtitle">Tags:</p>
-      <div class="card__tags">
-        
-          
-        
-          
-            <a href="/tags/markdown">markdown</a>, 
-          
-        
-          
-            <a href="/tags/css">css</a>, 
-          
-        
-          
-            <a href="/tags/html">html</a>
-          
-        
+    <section class="section alt">
+      <div class="container two-column">
+        <div>
+          <h2>How this is organized</h2>
+          <p>
+            The landing page is ordinary static HTML and CSS at the repository root.
+            Each training book is a separate mdBook project that gets built into a subfolder.
+          </p>
+        </div>
+        <div>
+          <pre><code>mstankus.github.io/
+  index.html
+  assets/site.css
+  rust-fundamentals/
+  proofs-and-structures/
+  .github/workflows/deploy.yml</code></pre>
+        </div>
       </div>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-layout">
+      <p>Built with static HTML for the landing page and mdBook for the books.</p>
+      <p><a href="https://github.com/rust-lang/mdBook">mdBook</a> · <a href="https://pages.github.com/">GitHub Pages</a></p>
     </div>
-  
-    <div class="card">
-      <h3 class="card__title">
-        <a href="/posts/sixthpost/">This is my sixth post.</a>
-      </h3>
-      <p class="card__date">22 Mar, 2021</p>
-      <p class="card__description">This is a post on My Blog about touchpoints and circling wagons.</p>
-      <p class="card__subtitle">Tags:</p>
-      <div class="card__tags">
-        
-          
-        
-          
-            <a href="/tags/another-tag">another tag</a>, 
-          
-        
-          
-            <a href="/tags/css">css</a>
-          
-        
-      </div>
-    </div>
-  
-    <div class="card">
-      <h3 class="card__title">
-        <a href="/posts/another-placeholder-post/">Another Placeholder Post</a>
-      </h3>
-      <p class="card__date">20 Mar, 2021</p>
-      <p class="card__description">Lorem Ipsum Dolor Si Amet consecuteor hello</p>
-      <p class="card__subtitle">Tags:</p>
-      <div class="card__tags">
-        
-          
-        
-          
-            <a href="/tags/markdown">markdown</a>, 
-          
-        
-          
-            <a href="/tags/text">text</a>, 
-          
-        
-          
-            <a href="/tags/another">another</a>
-          
-        
-      </div>
-    </div>
-  
-    <div class="card">
-      <h3 class="card__title">
-        <a href="/posts/placeholder-text/">Placeholder Text</a>
-      </h3>
-      <p class="card__date">19 Mar, 2021</p>
-      <p class="card__description">Lorem Ipsum Dolor Si Amet</p>
-      <p class="card__subtitle">Tags:</p>
-      <div class="card__tags">
-        
-          
-        
-          
-            <a href="/tags/markdown">markdown</a>, 
-          
-        
-          
-            <a href="/tags/text">text</a>
-          
-        
-      </div>
-    </div>
-  
-    <div class="card">
-      <h3 class="card__title">
-        <a href="/posts/markdown-syntax/">Markdown Syntax Guide</a>
-      </h3>
-      <p class="card__date">16 Mar, 2021</p>
-      <p class="card__description">Sample article showcasing basic Markdown syntax and formatting for HTML elements.</p>
-      <p class="card__subtitle">Tags:</p>
-      <div class="card__tags">
-        
-          
-        
-          
-            <a href="/tags/markdown">markdown</a>, 
-          
-        
-          
-            <a href="/tags/css">css</a>, 
-          
-        
-          
-            <a href="/tags/html">html</a>
-          
-        
-      </div>
-    </div>
-  
-    <div class="card">
-      <h3 class="card__title">
-        <a href="/posts/secondpost/">My very second post</a>
-      </h3>
-      <p class="card__date">10 Mar, 2021</p>
-      <p class="card__description">Nesciunt nulla quisquam magnam libero consequatur debitis est, dolorum quam</p>
-      <p class="card__subtitle">Tags:</p>
-      <div class="card__tags">
-        
-          
-        
-          
-            <a href="/tags/hello">hello</a>, 
-          
-        
-          
-            <a href="/tags/second">second</a>, 
-          
-        
-          
-            <a href="/tags/wow">wow</a>
-          
-        
-      </div>
-    </div>
-  
-</div>
-
-  <div class="pagination">
-      
-      
-        <a href="/page-2/" class="pagination__next">Next Page &rarr;</a>
-      
-  </div>
-</div>
-
-  <footer class="footer">
-  &copy; 2026 - Welcome to My Math and Computer Science Blog
-</footer>
-
-  <script>
-    const ham = document.querySelector('.navbar__hamburger')
-    const menu = document.querySelector('.navbar__mobile-links')
-    const darkToggleButtons = document.querySelectorAll('.dark-toggle')
-
-    function changeDarkToggleBtnIcon () {
-      darkToggleButtons.forEach(btn => {
-        if (btn.querySelector('img').src.indexOf('/static/img/moon.svg') !== -1) {
-          btn.querySelector('img').src = "/static/img/sun.svg"
-        } else {
-          btn.querySelector('img').src = "/static/img/moon.svg"
-        }
-      })
-    }
-
-    if (
-      localStorage.prefsDark === 'true' || 
-      (
-        window.matchMedia && 
-        window.matchMedia('(prefers-color-scheme: dark)').matches && 
-        localStorage.prefsDark !== 'false')
-      ) {
-      document.body.classList.add('dark')
-      changeDarkToggleBtnIcon()
-    }
-
-    ham.addEventListener('click', () => {
-      menu.classList.toggle('navbar__mobile-links--open')
-
-      let prevState = JSON.parse(ham.getAttribute('aria-expanded'))
-      ham.setAttribute('aria-expanded', !prevState)
-    })
-
-    darkToggleButtons.forEach(btn => {
-      btn.addEventListener('click', () => {
-        changeDarkToggleBtnIcon()
-
-        if (document.body.classList.contains('dark')) {
-          document.body.classList.remove('dark')
-          localStorage.prefsDark = 'false'
-        } else {
-          document.body.classList.add('dark')
-          localStorage.prefsDark = 'true'
-        }
-
-      })
-    })
-  </script>
+  </footer>
 </body>
 </html>
