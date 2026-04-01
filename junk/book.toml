@@ -1,0 +1,14 @@
+[book]
+title = "Junk"
+authors = ["Mark Stankus"]
+language = "en"
+src = "src"
+
+[build]
+build-dir = "../_site/junk"
+
+[output.html]
+default-theme = "navy"
+git-repository-url = "https://github.com/mstankus/mstankus.github.io"
+edit-url-template = "https://github.com/mstankus/mstankus.github.io/edit/main/junk/{path}"
+site-url = "/junk/"

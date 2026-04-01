@@ -39,6 +39,7 @@ jobs:
           cp assets/site.css _site/assets/site.css
           mdbook build rust-fundamentals
           mdbook build proofs-and-structures
+          mdbook build junk
           touch _site/.nojekyll
 
       - name: Upload Pages artifact
